@@ -33,8 +33,8 @@ class Settings:
         self.debug_mode = True
         if self.debug_mode:
             self.full_screen = False
-            self.screen_width = 900
-            self.screen_height = 600
+            self.screen_width = 600
+            self.screen_height = 400
 
             self.bullet_width = 500
             self.bullet_sustain = True
