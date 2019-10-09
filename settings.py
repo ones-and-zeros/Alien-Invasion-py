@@ -38,3 +38,5 @@ class Settings:
 
             self.bullet_width = 500
             self.bullet_sustain = True
+
+            self.ship_limit = 1
