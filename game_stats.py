@@ -11,3 +11,5 @@ class GameStats:
         self.ships_left = self.settings.ship_limit
         # Start game in inactive state 
         self.game_active = False
+        self.score = 0
+                
