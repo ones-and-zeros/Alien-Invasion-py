@@ -5,6 +5,7 @@ class GameStats:
         """Initialize statistics"""
         self.settings = ai_game.settings
         self.reset_stats()
+        self.high_score = 0
 
     def reset_stats(self):
         """Initialize statisctics that can change during game"""
@@ -12,4 +13,3 @@ class GameStats:
         # Start game in inactive state 
         self.game_active = False
         self.score = 0
-                
