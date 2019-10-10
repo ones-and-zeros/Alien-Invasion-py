@@ -232,7 +232,7 @@ class AlienInvasion:
         else:
             self.stats.game_active = False
             # Show the mouse cursor
-            pygame.mouse.set_visible(False)
+            pygame.mouse.set_visible(True)
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
