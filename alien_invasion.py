@@ -100,6 +100,7 @@ class AlienInvasion:
         self.stats.reset_stats()
         self.stats.game_active = True
         self.sb.prep_score()
+        self.sb.prep_level()
 
         # hide the mouse cursor
         pygame.mouse.set_visible(False)
@@ -141,6 +142,10 @@ class AlienInvasion:
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
             self.sb.check_high_score()
+
+            # increase level
+            self.stats.level += 1
+            self.sb.prep_level()
 
         if not self.aliens:
             # Destroy existing bullets and create new fleet

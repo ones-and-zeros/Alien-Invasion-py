@@ -13,3 +13,4 @@ class GameStats:
         # Start game in inactive state 
         self.game_active = False
         self.score = 0
+        self.level = 1
