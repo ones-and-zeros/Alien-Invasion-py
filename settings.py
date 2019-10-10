@@ -31,7 +31,7 @@ class Settings:
 
         self.initialize_dynamic_settings()
 
-        self.debug_mode = True
+        self.debug_mode = False
         if self.debug_mode:
             self.full_screen = False
             self.screen_width = 600
