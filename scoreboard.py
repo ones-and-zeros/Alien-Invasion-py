@@ -15,6 +15,15 @@ class Scoreboard:
         self.settings = ai_game.settings
         self.stats = ai_game.stats
 
+        # These attributes will be populated later
+        self.score_image = None
+        self.score_rect = None
+        self.high_score_image = None
+        self.high_score_rect = None
+        self.level_image = None
+        self.level_rect = None
+        self.ships = None
+
         # Font settings for scoring info
         self.text_color = (30, 30, 30)
         self.font = pygame.font.SysFont(None, 48)

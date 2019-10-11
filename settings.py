@@ -28,9 +28,16 @@ class Settings:
         # How quickly the alien point values increase
         self.score_scale = 1.5
 
+        # These attributes will be set later
+        self.ship_speed = None
+        self.bullet_speed = None
+        self.alien_speed = None
+        self.alien_points = None
+        self.fleet_direction = None
+
         self.initialize_dynamic_settings()
 
-        self.debug_mode = False
+        self.debug_mode = True
         if self.debug_mode:
             self.full_screen = False
             self.screen_width = 600

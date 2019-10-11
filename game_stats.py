@@ -4,8 +4,15 @@ class GameStats:
     def __init__(self, ai_game):
         """Initialize statistics"""
         self.settings = ai_game.settings
-        self.reset_stats()
         self.high_score = 0
+
+        # These stats will be populated later
+        self.ships_left = None
+        self.game_active = None
+        self.score = None
+        self.level = None
+
+        self.reset_stats()
 
     def reset_stats(self):
         """Initialize statistics that can change during game"""
