@@ -4,9 +4,8 @@ class Settings:
     def __init__(self):
         """Initialize te game's settings."""
 
-
         # Screen settings
-        self.full_screen = True
+        self.full_screen = False
         self.screen_width = 1200
         self.screen_height = 800
         self.bg_color = (230, 230, 230)  # light grey
@@ -61,4 +60,3 @@ class Settings:
         self.alien_speed *= self.speedup_scale
 
         self.alien_points = int(self.alien_points * self.score_scale)
-        

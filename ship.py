@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Ship(Sprite):
     """A class to manage the ship."""
 
@@ -33,7 +34,7 @@ class Ship(Sprite):
         if self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed   
 
-        #Update rect object from self.x.
+        # Update rect object from self.x.
         self.rect.x = self.x
 
     def blitme(self):
