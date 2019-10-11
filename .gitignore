@@ -1,1 +1,8 @@
+# Ignore general python cache
 __pycache__/
+
+# Ignore pycharm files per 'https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems?flash_digest=57e52233e688868381ba9266eef953823b82a4be'
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/tasks.xml
+.idea/shelf/
