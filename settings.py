@@ -37,6 +37,13 @@ class Settings:
 
         self.initialize_dynamic_settings()
 
+        # Locate image directory
+        self.use_alt_images = False
+        if self.use_alt_images:
+            self.image_dir = 'images_alt/'
+        else:
+            self.image_dir = 'images/'
+
         self.debug_mode = True
         if self.debug_mode:
             self.full_screen = False
