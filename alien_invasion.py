@@ -77,9 +77,13 @@ class AlienInvasion:
         if event.key == pygame.K_SPACE:
             self._fire_bullet()
         if event.key == pygame.K_p:
-            self._start_game()        
+            self.settings.set_alt_images(False)
+            self._start_game()
         if event.key == pygame.K_q:
             sys.exit()
+        if event.key == pygame.K_a:
+            self.settings.set_alt_images(True)
+            self._start_game()
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""

@@ -39,10 +39,8 @@ class Settings:
 
         # Locate image directory
         self.use_alt_images = False
-        if self.use_alt_images:
-            self.image_dir = 'images_alt/'
-        else:
-            self.image_dir = 'images/'
+        self.image_dir = None  # will be populated later
+        self.set_alt_images(self.use_alt_images)
 
         self.debug_mode = False
         if self.debug_mode:
@@ -74,3 +72,11 @@ class Settings:
         self.alien_speed *= self.speedup_scale
 
         self.alien_points = int(self.alien_points * self.score_scale)
+
+    def set_alt_images(self, alt_image):
+        """Modify the alternate images"""
+        self.use_alt_images = alt_image
+        if self.use_alt_images:
+            self.image_dir = 'images_alt/'
+        else:
+            self.image_dir = 'images/'
