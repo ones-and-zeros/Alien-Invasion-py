@@ -44,7 +44,7 @@ class Settings:
         else:
             self.image_dir = 'images/'
 
-        self.debug_mode = True
+        self.debug_mode = False
         if self.debug_mode:
             self.full_screen = False
             self.screen_width = 600
