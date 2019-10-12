@@ -12,7 +12,8 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         # Load the alien image and set its rect attribute.
-        self.image = pygame.image.load(self.settings.image_dir + 'alien_' + str(random.randint(1, 6)) + '.bmp')
+        self.image = None
+        self.update_image()
         self.rect = self.image.get_rect()
 
         # Start each nre alien near the top left of screen.
@@ -27,6 +28,10 @@ class Alien(Sprite):
         screen_rect = self.screen.get_rect()
         if self.rect.right >= screen_rect.right or self.rect.left <= screen_rect.left:
             return True
+
+    def update_image(self):
+        """Update the alien's image."""
+        self.image = pygame.image.load(self.settings.image_dir + 'alien_' + str(random.randint(1, 6)) + '.bmp')
 
     def update(self):
         """Move Aliens"""

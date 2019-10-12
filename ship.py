@@ -14,7 +14,8 @@ class Ship(Sprite):
         self.settings = ai_game.settings
 
         # Load the ship image and get it's rect.
-        self.image = pygame.image.load(self.settings.image_dir + 'ship.bmp')
+        self.image = None
+        self.update_image()
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen
@@ -26,6 +27,10 @@ class Ship(Sprite):
         # Movement flag
         self.moving_right = False
         self.moving_left = False
+
+    def update_image(self):
+        """Update the ship's image."""
+        self.image = pygame.image.load(self.settings.image_dir + 'ship.bmp')
 
     def update(self):
         """Update the ship's position based on the movement flag."""

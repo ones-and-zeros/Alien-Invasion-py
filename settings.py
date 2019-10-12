@@ -73,6 +73,10 @@ class Settings:
 
         self.alien_points = int(self.alien_points * self.score_scale)
 
+    def get_alt_images(self):
+        """Get state of alternate images"""
+        return self.use_alt_images
+
     def set_alt_images(self, alt_image):
         """Modify the alternate images"""
         self.use_alt_images = alt_image
